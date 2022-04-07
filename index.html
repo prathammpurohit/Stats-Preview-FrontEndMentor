@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cairo&family=Cormorant+Garamond:ital@1&family=Croissant+One&family=EB+Garamond&family=Fraunces:wght@100&family=Hind&family=Inria+Serif&family=Inter&family=Lexend+Deca&family=Lobster&family=Luxurious+Roman&family=Marck+Script&family=MedievalSharp&family=Merriweather&family=Noto+Serif+JP&family=Open+Sans&family=Outfit&family=Playfair+Display+SC&family=Playfair+Display:ital,wght@1,500&family=Quicksand&family=Roboto&family=Sacramento&family=Sedgwick+Ave&family=Source+Serif+Pro&family=Special+Elite&family=Tenor+Sans&family=The+Nautigal:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/phone.css">
+    <title>Stats-preview</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        :root {
+            --main-background: hsl(233, 47%, 7%);
+            --card-background: hsl(244, 38%, 16%);
+            --accent: hsl(277, 64%, 61%);
+            --main-heading-stats: hsl(0, 0%, 100%);
+            --main-paragraph: hsla(0, 0%, 100%, 0.75);
+            --stat-headings: hsla(0, 0%, 100%, 0.6);
+        }
+
+        #MainContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--main-background);
+            font-family: Inter;
+        }
+
+        .sameFont{
+            font-family: Lexend Deca;
+            font-weight: lighter;
+            opacity: 0.6;
+        }
+
+        #ContainerText {
+            padding: 3rem 4.4rem;
+            height: 23rem;
+            width: 30rem;
+            color: var(--main-heading-stats);
+            background-color: var(--card-background);
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+        }
+
+        #ContainerText h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        #ContainerText p {
+            margin-bottom: 3rem;
+        }
+        #ContainerText span {
+            color: var(--accent);
+        }
+
+        .innerFlex {
+            display: flex;
+            justify-content: space-between;
+        }
+        .innerFlex h2{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .sizeChange{
+            font-size: 0.6rem;
+        }
+
+        #ContainerImage {
+            height: 23rem;
+            width: 30rem;
+            position: relative;
+            background-color: var(--accent);
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            opacity: 1.3;
+        }
+
+        #ContainerImage::before {
+            content: "";
+            background: url("./images/image-header-desktop.jpg") no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            opacity: 0.5;
+        }
+
+        @media screen and (max-width: 992px){
+            #MainContainer{
+                flex-direction: column-reverse;
+            }
+            #ContainerText{
+                width: 22rem;
+                padding: 3rem 1rem;
+                text-align: center;
+            }
+            #ContainerText p{
+                margin-bottom: 2rem;
+            }
+            #ContainerText h1{
+                margin-bottom: 1.5rem;
+            }
+            #ContainerImage{
+                width: 22rem;
+                height: 15rem;
+            }
+            .innerFlex h2{
+                flex-direction:column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="MainContainer">
+
+        <div id="ContainerText">
+            <h1>Get <span>insights</span> that help your business grow. </h1>
+            <p class="sameFont">Discover the benifits of data analysis and make better decisions regarding revenue, customer experience,
+                and overall efficieny</p>
+
+            <div class="innerFlex">
+                <h2>10k+ <p class="sameFont sizeChange">COMPANIES</p> </h2>
+                <h2>314  <p class="sameFont sizeChange">TEMPLATES</p> </h2>
+                <h2>12M+ <p class="sameFont sizeChange">QUERIES</p> </h2>
+            </div>
+
+        </div>
+
+        <div id="ContainerImage">
+        </div>
+
+    </main>
+</body>
+
+</html>
